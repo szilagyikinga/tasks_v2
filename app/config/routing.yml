@@ -1,0 +1,6 @@
+tasks_user:
+    resource: "@TasksUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+
