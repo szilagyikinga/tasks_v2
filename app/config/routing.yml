@@ -1,3 +1,11 @@
+task:
+    resource: "@TaskBundle/Resources/config/routing_user.yml"
+    prefix:   /tache
+
+task.admin:
+    resource: "@TaskBundle/Resources/config/routing_admin.yml"
+    prefix:   /admin/tache
+
 tasks_user:
     resource: "@TasksUserBundle/Resources/config/routing.yml"
     prefix:   /

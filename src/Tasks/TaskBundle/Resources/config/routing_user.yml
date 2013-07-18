@@ -1,0 +1,11 @@
+Task_home:
+    pattern: /
+    defaults: { _controller: TaskBundle:User:index}
+
+Task_view:
+    pattern: /{id_task}
+    defaults: { _controller: TaskBundle:User:view }
+    requirements:
+        id_task: \d+
+
+

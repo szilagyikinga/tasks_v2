@@ -4,7 +4,7 @@ imports:
 
 framework:
     #esi:             ~
-    #translator:      { fallback: %locale% }
+    translator:       ~  #{ fallback: %locale% }
     secret:          %secret%
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -69,3 +69,9 @@ fos_user:
     db_driver: orm
     firewall_name: main
     user_class: Tasks\UserBundle\Entity\User
+    registration:
+            confirmation:
+                enabled:    true
+    from_email:
+            address:        noreplytasks.com
+            sender_name:    Acme Demo App

@@ -1,0 +1,25 @@
+Task_create:
+    pattern: /
+    defaults: { _controller: TaskBundle:Admin:create }
+    requirements:
+        _method:  GET
+
+Task_create_process:
+    pattern: /
+    defaults: { _controller: TaskBundle:Admin:createProcess }
+    requirements:
+        _method:  POST
+
+Task_delete:
+    pattern: /supprimer/{id_task}
+    defaults: { _controller: TaskBundle:Admin:delete }
+    requirements:
+        id_task: \d+
+
+Task_edit:
+    pattern: /{id_task}
+    defaults: { _controller: TaskBundle:Admin:edit }
+    requirements:
+        id_task: \d+
+
+

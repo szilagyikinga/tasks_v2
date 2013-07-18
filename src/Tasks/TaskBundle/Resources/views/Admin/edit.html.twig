@@ -1,0 +1,11 @@
+{% extends "::base.html.twig" %}
+{% block title %}Nouvelle tâche | {{ parent() }}{% endblock %}
+{% block body %}
+    {{ parent() }}
+    <h1>Editer une tâche</h1>
+    <form action="{{ path("Task_edit", {'id_task':id_task}) }}" method="post">
+        {{ form_widget(form) }}
+        <input type="submit">
+    </form>
+
+{% endblock %}

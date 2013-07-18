@@ -1,0 +1,17 @@
+<article>
+    <header>
+        {% if link %}
+            <h2><a href="{{ path('Task_view', {'id_task':task.id}) }}">{{ task.title }}</a></h2>
+        {% else %}
+            <h2>{{ task.title }}</h2>
+        {% endif %}
+        <div>
+            <a href="{{ path("Task_edit", {'id_task':task.id}) }}" title="editer">Editer</a>
+            <a href="{{ path("Task_delete", {'id_task':task.id}) }}" title="supprimer">Supprimer</a>
+        </div>
+        <time>{{ task.dateCreation|date('d m Y') }}</time>
+    </header>
+    <div class="content">
+        <p>{{ task.content }}</p>
+    </div>
+</article>

@@ -1,0 +1,9 @@
+{% extends "::base.html.twig" %}
+{% block title %}Toutes les tâches | {{ parent() }}{% endblock %}
+{% block body %}
+    {{ parent() }}
+    <h1>Toutes les tâches</h1>
+    {% for task in tasks %}
+        {% include "TaskBundle:User:task_content.html.twig" with { 'link':true } %}
+    {% endfor %}
+{% endblock %}
